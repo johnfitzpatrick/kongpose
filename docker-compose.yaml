@@ -54,7 +54,7 @@ services:
       db:
         condition: service_healthy
     volumes:
-      - ./ssl-certs:/tmp/ssl/customcerts
+      - /home/ubuntu/kongpose/ssl-certs:/tmp/ssl/customcerts
     environment:
       KONG_ROLE: control_plane
       KONG_CLUSTER_CERT: /tmp/ssl/customcerts/hybrid/cluster.crt
@@ -140,7 +140,7 @@ services:
       kong-cp:
         condition: service_healthy
     volumes:
-      - ./ssl-certs:/tmp/ssl/customcerts
+      - /home/ubuntu/kongpose/ssl-certs:/tmp/ssl/customcerts
     environment:
       KONG_ROLE: "data_plane"
       KONG_CLUSTER_CERT: "/tmp/ssl/customcerts/hybrid/cluster.crt"
