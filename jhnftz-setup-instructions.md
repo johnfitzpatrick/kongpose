@@ -28,7 +28,8 @@ $HOSTIP proxy.kong.lan
 "
 ```
 
-# SHould see something like this
+# Should see something like this
+
 ```
 tail -6 /etc/hosts
 54.175.115.117 manager.kong.lan
@@ -39,6 +40,7 @@ tail -6 /etc/hosts
 ```
 # Clone the repo
 
+```
 git clone https://github.com/johnfitzpatrick/kongpose.git
 cd kongpose
 git checkout simple-jaf
