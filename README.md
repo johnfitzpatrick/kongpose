@@ -93,6 +93,12 @@ Make sure to install the private CA certificate to the OS truststore or you will
 
 ### Start the kong containers
 
+if using docker-compose.yaml referencing ${HOSTIP} on an EC2 vm then execute the following before `docker-compose up -d`
+
+~~~shell
+HOSTIP=$(curl http://169.254.169.254/latest/meta-data/public-ipv4)
+~~~
+
 ~~~shell
 docker-compose up -d
 ~~~
